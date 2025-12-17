@@ -66,7 +66,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
     sudo swapoff -a
     ```
 
-2. **Load Necessary Kernel Modules**: Required for Kubernetes networking.
+2. **Load Necessary Kernel Modules**: Required for Kubernetes networking. # Why ?? https://chatgpt.com/share/694246c0-29e8-8002-a4c7-437be350c90d
     ```bash
     cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
     overlay
