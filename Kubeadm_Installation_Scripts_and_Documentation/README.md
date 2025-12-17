@@ -61,7 +61,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 
 ## Execute on Both "Master" & "Worker" Nodes
 
-1. **Disable Swap**: Required for Kubernetes to function correctly.
+1. **Disable Swap**: Required for Kubernetes to function correctly. # Why ?? https://chatgpt.com/share/69424441-c274-8002-9883-5bd5844049ca
     ```bash
     sudo swapoff -a
     ```
