@@ -181,6 +181,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 
 ```bash
 kubectl get nodes
+watch kubectl get nodes   # shows nodes status in each 2 secs.
 
 ```
 
@@ -190,5 +191,11 @@ kubectl get nodes
 
 ## Verify Container Status on Worker Node
 <img src="https://github.com/user-attachments/assets/c3d3732f-5c99-4a27-a574-86bc7ae5a933" width="70%">
+
+## Create a pod    ## For more Commands https://chatgpt.com/share/6942587d-80b8-8002-a68e-dba78b3f0dce
+```bash
+kubectl run nginx --image=nginx:latest
+
+```
 
 
