@@ -28,7 +28,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 2. **Locate Security Groups**:
     - In the left menu under **Network & Security**, click on **Security Groups**.
 
-3. **Create a New Security Group**:
+3. **Create a New Security Group**: # why ? https://chatgpt.com/share/69424874-c6d0-8002-ba9b-ef2096c0b6ce
     - Click on **Create Security Group**.
     - Provide the following details:
       - **Name**: (e.g., `Kubernetes-Cluster-SG`)
@@ -90,7 +90,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
     lsmod | grep overlay
     ```
 
-4. **Install Containerd**:
+4. **Install Containerd**: # why ?? https://chatgpt.com/share/69424a24-2fc4-8002-a44f-8bebbbb75fbb
     ```bash
     sudo apt-get update
     sudo apt-get install -y ca-certificates curl
@@ -109,7 +109,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
     sudo systemctl status containerd
     ```
 
-5. **Install Kubernetes Components**:
+5. **Install Kubernetes Components**: # Why ?? https://chatgpt.com/share/69424cc2-1598-8002-92f3-420e88d7bea9
     ```bash
     sudo apt-get update
     sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -123,21 +123,21 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
     sudo apt-mark hold kubelet kubeadm kubectl
     ```
 
-## Execute ONLY on the "Master" Node
+## Execute ONLY on the "Master" Node  # Why ?? https://chatgpt.com/share/69424df6-1828-8002-b7f5-07b863347303
 
 1. **Initialize the Cluster**:
     ```bash
     sudo kubeadm init
     ```
 
-2. **Set Up Local kubeconfig**:
+2. **Set Up Local kubeconfig**: # Why ?? https://chatgpt.com/share/69424f83-4fd4-8002-876b-f8bb0f58d3f2
     ```bash
     mkdir -p "$HOME"/.kube
     sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
     sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
     ```
 
-3. **Install a Network Plugin (Calico)**:
+3. **Install a Network Plugin (Calico)**: # why ?? https://chatgpt.com/share/69425053-f348-8002-80d3-8109944d8287
     ```bash
     kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico.yaml
     ```
@@ -175,7 +175,7 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 
 ---
 
-## Verify Cluster Connection
+## Verify Cluster Connection: # if worker not ready https://chatgpt.com/share/69425668-803c-8002-9c6a-a6e13abaf20a
 
 **On Master Node:**
 
